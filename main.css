@@ -1,0 +1,105 @@
+
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 50px 790px 50px;
+    grid-template-areas: '. . theHeader theHeader theHeader theHeader theHeader theHeader theHeader theHeader . .'
+        '. . theSection theSection theSection theSection theSection theSection theSection theSection . .'
+        '. . theFooter theFooter theFooter theFooter theFooter theFooter theFooter theFooter . .';
+}
+
+header{
+    grid-area: theHeader;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+}
+
+header img{
+    width: 50px;
+    justify-self: center;
+}
+
+header h2{
+    color: blue;
+    grid-column: 2/5;
+    align-self: center;
+}
+
+section{
+    grid-area: theSection;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 50px repeat(3,1fr);
+    grid-template-areas: 'shopTag shopTag shopTag shopTag shopTag'
+    'cart1 cart1 cart1 cart1 cart1'
+    'cart2 cart2 cart2 cart2 cart2'
+    'cart3 cart3 cart3 cart3 cart3';
+}
+
+section h5{
+    grid-area: shopTag;
+    display: flex;
+    align-items: center;
+    color: darkolivegreen;
+}
+
+section .cart1{
+    grid-area: cart1;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px grey solid;
+    border-top: 1px grey solid;
+}
+
+section .cart1 img{
+    width: 120px;
+}
+
+section .cart2{
+    grid-area: cart2;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px grey solid;
+    border-top: 1px grey solid;
+}
+
+section .cart2 img{
+    width: 120px;
+}
+
+section .cart3{
+    grid-area: cart3;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px grey solid;
+    border-top: 1px grey solid;
+}
+
+section .cart3 img{
+    width: 120px;
+}
+
+
+footer{
+    grid-area: theFooter;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer p{
+    color: white;   
+    
+}
