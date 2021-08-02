@@ -120,3 +120,10 @@ love3.onclick=function(){
         checkLove3=true;
     }
 }
+
+var totalPrice=document.getElementById("total"),
+    btnPrice=document.getElementById("calcTotal");
+
+btnPrice.onclick=function(){
+    totalPrice.innerHTML=parseInt(price3.innerHTML)+parseInt(price2.innerHTML)+parseInt(price1.innerHTML);
+}
